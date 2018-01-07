@@ -12,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.adminportal.service.impl.UserSecurityService;
-import com.bookstore.utility.SecurityUtility;
+import com.adminportal.utility.SecurityUtility;
 
 @Configuration
 @EnableWebSecurity
@@ -50,6 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.csrf().disable().cors().disable()
 			.formLogin().failureUrl("/login?error").defaultSuccessUrl("/")
+			.defaultSuccessUrl("/")
 			.loginPage("/login").permitAll()
 			.and()
 			.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
