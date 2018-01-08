@@ -1,5 +1,7 @@
 package com.adminportal.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public Book save(Book book) {
 		return bookRepository.save(book);
+	}
+
+	@Override
+	public List<Book> findAll() {
+		return (List<Book>) bookRepository.findAll();
 	}
 
 }

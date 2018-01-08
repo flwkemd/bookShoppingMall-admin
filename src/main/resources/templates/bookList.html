@@ -5,7 +5,37 @@
 
   <body>
 	<div th:replace="common/header :: navbar" />
-	<h1>책 목록 페이지</h1>
+
+	<div class="container">
+		<div class="table-responsive">
+			<table id="bookListTable" class="table table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+						<th>제목</th>
+						<th>작가</th>
+						<th>카테고리</th>
+						<th>가격</th>
+						<th>할인가격</th>
+						<th>활성화여부</th>
+						<th>작업</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-th-each="book : ${bookList}">
+						<!-- <td><input hidden="hidden" name="id" th:value="${book.id}" /></td> -->
+						<td th:text="${book.title}"></td>
+						<td th:text="${book.author}"></td>
+						<td th:text="${book.category}"></td>
+						<td th:text="${book.listPrice}"></td>
+						<td th:text="${book.ourPrice}"></td>
+						<td th:text="${book.active}"></td>
+						<td>삭제</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 	<div th:replace="common/header :: body-bottom-scripts" />
   </body>
 </html>
