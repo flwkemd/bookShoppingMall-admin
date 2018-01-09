@@ -15,6 +15,7 @@
 						 책 수정하기<span style="font-size: small"> * 는 필수로 기입하셔야 합니다.</span>
 					</legend>
 
+					<input hidden="hidden" name="id" th:value="${book.id}" />
 
 					<!-- title -->
 					<div class="form-group">
@@ -147,7 +148,7 @@
 						<div class="col-md-8">
 							<div class="input-group">
 								<span class="input-group-addon">원</span> <input
-									th:value="${book.listPrice}" type="number" name="listPrice" step="0.01"
+									th:value="${book.listPrice}" type="number" step="0.01" name="listPrice"
 									class="form-control" id="listPrice" placeholder="가격" />
 							</div>
 						</div>

@@ -18,7 +18,7 @@
 			<div class="col-xs-3">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<img th:src="@{/image/book/}+${book.id}+'.png'" class="img-responsive" />
+						<img th:src="@{/image/book/}+${book.id}+'.png'" class="img-responsive center-block" />
 					</div>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 					<div class="col-xs-6">
 						<p><strong>형식: </strong><span th:text="${book.format}"></span></p>
 						<p><strong>ISBN: </strong><span th:text="${book.isbn}"></span></p>
-						<p><strong>무게: </strong><span th:text="${book.shippingWeight}"></span></p>
+						<p><strong>무게: </strong><span th:text="${book.shippingWeight}"></span>kg</p>
 						<p><strong>가격: </strong><span th:text="${book.listPrice}"></span></p>
 						<p><strong>할인가격: </strong><span th:text="${book.ourPrice}"></span></p>
 						<p><strong>재고: </strong><span th:text="${book.inStockNumber}"></span></p>
