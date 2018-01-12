@@ -26,8 +26,8 @@
 						<td ><a th:href="@{/book/bookInfo(id=${book.id})}"><span th:text="${book.title}"></span></a></td>
 						<td th:text="${book.author}"></td>
 						<td th:text="${book.category}"></td>
-						<td th:text="${book.listPrice}"></td>
-						<td th:text="${book.ourPrice}"></td>
+						<td th:text="${#numbers.formatDecimal((book.listPrice), 0, 'COMMA', 0, 'POINT' )}"></td>
+						<td th:text="${#numbers.formatDecimal((book.ourPrice), 0, 'COMMA', 0, 'POINT' )}"></td>
 						<td th:text="${book.active}"></td>
 						<td>삭제</td>
 					</tr>
