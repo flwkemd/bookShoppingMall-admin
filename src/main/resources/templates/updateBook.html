@@ -182,8 +182,8 @@
 						<label class="col-md-2 control-label" for="status">상태</label>
 						<div class="col-md-8">
 							<label><input value="true" type="radio" name="active"
-								checked="checked" /> 활성화 </label> <label><input
-								value="false" type="radio" name="active" />
+								th:checked="${book.active}" /> 활성화 </label> <label><input
+								value="false" type="radio" name="active" th:checked="${book.active}" />
 								비활성화</label>
 						</div>
 					</div>
